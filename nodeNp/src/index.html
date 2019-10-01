@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <!-- <link href="style.css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+<div id="code">
+Область  <select v-model="area" >
+<option v-for="item in areas">{{item.Description}}</option> <br></br>
+
+</select> 
+</br></br> Город 
+<select v-model="city" @change="getViddilsByCity">
+        <option v-for="item in cities">{{item.Description}}</option> <br></br>
+                 
+                </select>
+        </br></br>
+                Отделение <select v-model="point">
+                <option v-for="item in wareHouses">{{item.Description}}</option> 
+                
+        </select> 
+ 
+
+</div>
+<script src="main.js"></script>
+</body>
+
+</html>
